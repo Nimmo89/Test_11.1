@@ -12,7 +12,6 @@ public class ProductRepository {
     private static Product[] products = new Product[0];
     private int id;
 
-
     public void save(Product item) {
         int length = products.length + 1;
         Product[] tmp = new Product[length];
@@ -26,16 +25,16 @@ public class ProductRepository {
         return products;
     }
 
-    public Product findById(int id) {
+    public static Product[] findById(int id) {
         for (Product item : products) {
             if (item.getId() == id) {
-                return item;
+                return new Product[]{item};
             }
         }
         return null;
     }
 
-    public void removeById(int id) {
+    public static void removeById(int id) {
         int length = products.length - 1;
         Product[] tmp = new Product[length];
         int index = 0;
