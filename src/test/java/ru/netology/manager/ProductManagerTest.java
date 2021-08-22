@@ -6,14 +6,17 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import ru.netology.domain.Book;
+import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
 import ru.netology.repository.ProductRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 class ProductManagerTest {
+
     @Mock
     private ProductRepository repository;
+
     @InjectMocks
     private ProductManager manager;
     private Book coreJava = new Book(2, "Book2", 400, "Author2");
