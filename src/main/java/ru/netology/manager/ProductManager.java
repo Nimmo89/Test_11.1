@@ -6,6 +6,9 @@ import ru.netology.repository.ProductRepository;
 public class ProductManager {
     private ProductRepository repository;
 
+    public ProductManager() {
+    }
+
     public void add(Product product) {
         repository.save(product);
     }
