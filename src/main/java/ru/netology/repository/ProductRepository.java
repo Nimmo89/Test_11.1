@@ -1,13 +1,13 @@
 package ru.netology.repository;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import ru.netology.domain.Product;
+//import lombok.AllArgsConstructor;
+//import lombok.Data;
+//import lombok.NoArgsConstructor;
+import ru.netology.domain.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Data
 public class ProductRepository {
     private static Product[] products = new Product[0];
 
@@ -44,5 +44,8 @@ public class ProductRepository {
             }
         }
         products = tmp;
+    }
+
+    public ProductRepository() {
     }
 }
