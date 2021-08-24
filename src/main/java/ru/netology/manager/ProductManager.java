@@ -7,7 +7,7 @@ public class ProductManager {
     private ProductRepository[] products = new ProductRepository[0];
 
     public void add(Product product) {
-        products.
+        repos
         int length = products.length + 1; //mew massive + 1
         ProductRepository[] tmp = new ProductRepository[length];
         System.arraycopy(products, 0, tmp, 0, products.length); //copy all elements
