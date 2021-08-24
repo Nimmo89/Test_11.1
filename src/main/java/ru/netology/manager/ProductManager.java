@@ -9,10 +9,6 @@ public class ProductManager {
     public ProductManager() {
     }
 
-    public void add(Product product) {
-        repository.save(product);
-    }
-
     public boolean matches(Product product, String search) {
         if (product instanceof Book) { // если в параметре product лежит объект класса Book
             Book book = (Book) product; // положем его в переменную типа Book чтобы пользоваться методами класса Book
