@@ -50,4 +50,5 @@ public class ProductManager {
     public ProductManager(ProductRepository repository) {
         this.repository = repository;
     }
+
 }
