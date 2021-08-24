@@ -15,7 +15,7 @@ class ProductManagerTest {
     private Book b2 = new Book(2, "Book2", 300, "Au2");
     private Book b3 = new Book(3, "Book3", 150, "Au3");
     private Book b4 = new Book(4, "Book4", 450, "Au2");
-    private Book b5 = new Book(5, "Book5", 500, "Au4");
+    private Book b5 = new Book(5, "Book5", 500, "Au1");
     private Smartphone s1 = new Smartphone(1, "Smart1", 2000, "Sm1");
     private Smartphone s2 = new Smartphone(2, "Smart2", 5000, "Sm2");
     private Smartphone s3 = new Smartphone(3, "Smart3", 7500, "Sm3");
@@ -36,10 +36,12 @@ class ProductManagerTest {
         manager.add(s5);
     }
 
-    @Test
-    void searchBy() {
-        manager.searchBy("Sm1");
-
-        ProductManager[] expected = ProductManager[];
-    }
+//    @Test
+//    void searchBy() {
+//        manager.searchBy("Au1");
+//
+//        Book expected = ;
+//        Book actual = b1;
+//        assertArrayEquals(expected, actual);
+//    }
 }
