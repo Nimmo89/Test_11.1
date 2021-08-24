@@ -10,7 +10,6 @@ import ru.netology.domain.Product;
 @Data
 public class ProductRepository {
     private static Product[] products = new Product[0];
-    private int id;
 
     public void save(Product item) {
         int length = products.length + 1;
