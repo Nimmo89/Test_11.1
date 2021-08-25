@@ -35,12 +35,10 @@ class ProductManagerTest {
         manager.add(s5);
     }
 
-//    @Test
-//    void searchBy() {
-//        manager.searchBy("Au1");
-//
-//        Book expected = ;
-//        Book actual = b1;
-//        assertArrayEquals(expected, actual);
-//    }
+    @Test
+    void searchBy() {
+        Book[] expected = new Book[]{b1, b5};
+        Product[] actual = manager.searchBy("Au1");
+        assertArrayEquals(expected, actual);
+    }
 }
