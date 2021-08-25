@@ -36,9 +36,30 @@ class ProductManagerTest {
     }
 
     @Test
-    void searchBy() {
+    void searchByAutor() {
         Book[] expected = new Book[]{b1, b5};
         Product[] actual = manager.searchBy("Au1");
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void searchByNameBook() {
+        Book[] expected = new Book[]{b3};
+        Product[] actual = manager.searchBy("Book3");
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void searchByNameSmartphone() {
+        Smartphone[] expected = new Smartphone[]{s4};
+        Product[] actual = manager.searchBy("Smart4");
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void searchByProducer() {
+        Smartphone[] expected = new Smartphone[]{s1, s5};
+        Product[] actual = manager.searchBy("Sm1");
         assertArrayEquals(expected, actual);
     }
 }
