@@ -62,4 +62,11 @@ class ProductManagerTest {
         Product[] actual = manager.searchBy("Sm1");
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void searchByNever() {
+        Smartphone[] expected = new Smartphone[]{};
+        Product[] actual = manager.searchBy(" ");
+        assertArrayEquals(expected, actual);
+    }
 }
