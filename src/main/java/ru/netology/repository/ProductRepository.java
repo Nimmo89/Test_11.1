@@ -18,27 +18,27 @@ public class ProductRepository {
         return products;
     }
 
-    public static Product[] findById(int id) {
-        for (Product item : products) {
-            if (item.getId() == id) {
-                return new Product[]{item};
-            }
-        }
-        return null;
-    }
-
-    public static void removeById(int id) {
-        int length = products.length - 1;
-        Product[] tmp = new Product[length];
-        int index = 0;
-        for (Product item : products) {
-            if (item.getId() != id) {
-                tmp[index] = item;
-                index++;
-            }
-        }
-        products = tmp;
-    }
+//    public static Product[] findById(int id) {
+//        for (Product item : products) {
+//            if (item.getId() == id) {
+//                return new Product[]{item};
+//            }
+//        }
+//        return null;
+//    }
+//
+//    public static void removeById(int id) {
+//        int length = products.length - 1;
+//        Product[] tmp = new Product[length];
+//        int index = 0;
+//        for (Product item : products) {
+//            if (item.getId() != id) {
+//                tmp[index] = item;
+//                index++;
+//            }
+//        }
+//        products = tmp;
+//    }
 
     public ProductRepository() {
     }
