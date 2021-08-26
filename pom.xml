@@ -71,11 +71,17 @@
                 <configuration>
                     <rules>
                         <rule>
+                            <element>METHOD</element>
+                            <excludes>
+                                <exclude>equals</exclude>
+                                <exclude>hashCode</exclude>
+                                <exclude>toString</exclude>
+                            </excludes>
                             <limits>
                                 <limit>
                                     <counter>INSTRUCTION</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>100%</minimum>
+                                    <minimum>95%</minimum>
                                 </limit>
                             </limits>
                         </rule>
