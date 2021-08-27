@@ -69,14 +69,13 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <excludes>
+                        <exclude>ru/netology/domain/Book.class</exclude>
+                        <exclude>ru/netology/domain/Product.class</exclude>
+                        <exclude>ru/netology/domain/Smartphone.class</exclude>
+                    </excludes>
                     <rules>
                         <rule>
-                            <element>METHOD</element>
-                            <excludes>
-                                <exclude>equals</exclude>
-                                <exclude>hashCode</exclude>
-                                <exclude>toString</exclude>
-                            </excludes>
                             <limits>
                                 <limit>
                                     <counter>INSTRUCTION</counter>
