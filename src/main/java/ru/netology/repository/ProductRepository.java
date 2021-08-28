@@ -28,6 +28,9 @@ public class ProductRepository {
     }
 
     public void removeById(int id) {
+        if (findById() != id){
+            throw new NotFoundException("Этого товара нет в списке");
+        }
         int length = products.length - 1;
         Product[] tmp = new Product[length];
         int index = 0;
