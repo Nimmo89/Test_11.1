@@ -28,19 +28,20 @@ public class ProductRepository {
     }
 
     public void removeById(int id) {
-        if (findById() != id){
+        if (findById(id) == null){
             throw new NotFoundException("Этого товара нет в списке");
-        }
-        int length = products.length - 1;
-        Product[] tmp = new Product[length];
-        int index = 0;
-        for (Product item : products) {
-            if (item.getId() != id) {
-                tmp[index] = item;
-                index++;
+        } else {
+            int length = products.length - 1;
+            Product[] tmp = new Product[length];
+            int index = 0;
+            for (Product item : products) {
+                if (item.getId() != id) {
+                    tmp[index] = item;
+                    index++;
+                }
             }
+            products = tmp;
         }
-        products = tmp;
     }
 
     public ProductRepository() {
