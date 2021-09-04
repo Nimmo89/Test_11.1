@@ -12,6 +12,10 @@ public class ProductRepository {
         return products.add(item);
     }
 
+    public void saveAll(Collection<Product> products) {
+        this.products.addAll(products);
+    }
+
     public Collection<Product> findAll() {
         return products;
     }
@@ -27,6 +31,10 @@ public class ProductRepository {
 
     public void removeById(int id) {
         products.removeIf(product -> product.getId() == id);
+    }
+
+    public void removeAll(Collection<Product> products) {
+        this.products.removeAll(products);
     }
 
     public ProductRepository() {
