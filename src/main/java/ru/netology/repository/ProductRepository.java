@@ -12,7 +12,7 @@ public class ProductRepository {
         return products.add(item);
     }
 
-    public void saveAll(Collection<Product> products) {
+    public void saveAll(Collection<? extends Product> products) {
         this.products.addAll(products);
     }
 
