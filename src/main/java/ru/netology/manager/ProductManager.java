@@ -10,6 +10,10 @@ public class ProductManager {
         repository.save(product);
     }
 
+    public Product[] getAll() {
+        return repository.findAll().toArray(new Product[0]);
+    }
+
     public boolean matches(Product product, String search) {
         if (product instanceof Book) { // если в параметре product лежит объект класса Book
             Book book = (Book) product; // положем его в переменную типа Book чтобы пользоваться методами класса Book
