@@ -2,19 +2,17 @@ package ru.netology.repository;
 
 import ru.netology.domain.*;
 
-public class ProductRepository {
-    private Product[] products = new Product[0];
+import java.util.ArrayList;
+import java.util.Collection;
 
-    public void save(Product item) {
-        Product[] tmp = new Product[products.length + 1];
-        for (int i = 0; i < products.length; i++) {
-            tmp[i] = products[i];
-        }
-        tmp[tmp.length - 1] = item;
-        products = tmp;
+public class ProductRepository {
+    private Collection<Product> products = new ArrayList<>();
+
+    public boolean save(Product item) {
+        return products.add(item);
     }
 
-    public Product[] findAll() {
+    public Collection<Product> findAll() {
         return products;
     }
 
@@ -28,16 +26,7 @@ public class ProductRepository {
     }
 
     public void removeById(int id) {
-        int length = products.length - 1;
-        Product[] tmp = new Product[length];
-        int index = 0;
-        for (Product item : products) {
-            if (item.getId() != id) {
-                tmp[index] = item;
-                index++;
-            }
-        }
-        products = tmp;
+        products.removeIf(product -> product.getId() == id);
     }
 
     public ProductRepository() {
